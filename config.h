@@ -21,8 +21,8 @@
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X)             \
     X(" ", "date '+%H:%M'", 10, 10) \
-    X("📂 ", STATSCMD, 1 * HOURS, 12) \
-    X(" ", UPDATESCMD, 2, 13) \
+    X("📂 ",UPDATESCMD, 1 * HOURS, 12) \
+    X(" ", STATSCMD, 2, 13) \
     X(" ", WEATHERCMD, 30 * MINUTES, 14) \
     X(" ", "date '+%Y-%m-%d'", 15 * MINUTES, 15) \
     X("", "pgrep spotify_player &> /dev/null && playerctl metadata --player spotify_player --format '{{status}}: {{title}} - {{artist}}' | sed 's/Paused://g' | sed 's/Playing://g'", 3, 16) \
